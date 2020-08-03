@@ -9,7 +9,7 @@ class Popular extends React.Component {
     }
 
     componentDidMount() {
-        const url = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=74fcec592c14695d692fe0a47f7b607d'
+        const url = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=<api>'
             fetch(url)
             .then(res => res.json())
             .then(json => {
@@ -25,7 +25,9 @@ class Popular extends React.Component {
     //       movies
     //   } = this.state;
     return(
-      <div>popular</div>
+      <div>
+        <h1>Popular</h1>
+      </div>
     );
   }
 }

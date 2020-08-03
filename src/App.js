@@ -17,14 +17,14 @@ class App extends React.Component {
   render() {
     return(
       <Router>
-        <div>
+        <div className="container">
           <nav>
             <ul>
-              <li><Link to="/">Discover</Link></li>
-              <li><Link to="/battle">DiscoverBattle</Link></li>
+              <li><Link to="/">This week</Link></li>
+              <li><Link to="/battle">This week battle</Link></li>
               <li><Link to="/pupolar/">Popular</Link></li>
-              <li><Link to="/pupolar-battle/">PopularBattle</Link></li>
-              <li><Link to="/my-list/">MyList</Link></li>
+              <li><Link to="/pupolar-battle/">Popular battle</Link></li>
+              <li><Link to="/my-list/">My list</Link></li>
             </ul>
           </nav>
           <Switch>
