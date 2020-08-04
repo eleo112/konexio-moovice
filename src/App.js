@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
   BrowserRouter as Router,
@@ -12,6 +11,8 @@ import Popular from './components/Popular';
 import MyList from './components/MyList';
 import DiscoverBattle from './components/DiscoverBattle';
 import PopularBattle from './components/PopularBattle';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   render() {

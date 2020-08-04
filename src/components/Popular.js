@@ -1,4 +1,6 @@
 import React from 'react';
+import Api from '../utils/Api';
+// import Discover from './Discover';
 
 class Popular extends React.Component {
     constructor(props) {
@@ -9,15 +11,16 @@ class Popular extends React.Component {
     }
 
     componentDidMount() {
-        const url = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=<api>'
-            fetch(url)
-            .then(res => res.json())
-            .then(json => {
-                const movies = json.movies
-                this.setState({
-                    movies
-                });
-            });
+      Api.getReleaseMovies()
+        .then((movies) => {
+          this.setState({
+            movies
+          })
+        });
+    }
+
+    onClickMovie(movieId) {
+
     }
 
   render() {

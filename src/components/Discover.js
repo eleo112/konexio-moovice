@@ -1,4 +1,5 @@
 import React from 'react';
+import Api from '../utils/Api';
 import Card from './movie/Card';
 
 class Discover extends React.Component {
@@ -11,15 +12,12 @@ class Discover extends React.Component {
   }
 
   componentDidMount() {
-    const url = "api movie";
-    fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      const movies = data.results;
-      this.setState({
-        movies
-      });
-    });
+    Api.getReleaseMovies()
+        .then((movies) => {
+          this.setState({
+            movies
+          })
+        });
   }
 
   render() {
